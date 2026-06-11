@@ -25,8 +25,6 @@ pip install openpyxl
 nohup python3 main.py > output.log 2>&1 &
 ps -ef | grep python3
 
-
-
 # 백그라운드 실행 2 : screen 명령어 사용 (프로세스 화면 모니터링 가능)
 # 설치: 
 # sudo apt install screen     # (Ubuntu/Debian 기준)
