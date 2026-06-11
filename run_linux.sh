@@ -13,7 +13,6 @@ pip install requests
 pip install websockets
 pip install pandas
 pip install openpyxl
-# python3 main.py
 
 # 백그라운드 실행 1  
 # > output.log: 프로그램 출력 결과를 해당 파일에 저장합니다.
@@ -23,7 +22,8 @@ pip install openpyxl
 # 종료 명령어: kill -9 [PID번호] (예: kill -9 12345)
 
 nohup python3 main.py > output.log 2>&1 &
-ps -ef | grep python3
+ps -ef | grep python3	# 모든 프로세스 중에서 python3를 포함하는 프로세스
+
 
 # 백그라운드 실행 2 : screen 명령어 사용 (프로세스 화면 모니터링 가능)
 # 설치: 
