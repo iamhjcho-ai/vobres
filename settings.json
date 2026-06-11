@@ -1,0 +1,16 @@
+{
+  "process_name": "모의",
+  "auto_start": true,
+  "search_seq": "1",
+  "take_profit_rate": 15.0,
+  "stop_loss_rate": -15.0,
+  "buy_ratio": 20.0,
+  "vo_rate": 0.5,
+  "inv_days": 20,
+  "market_start_hour": 9,
+  "market_start_minute": 5,
+  "market_end_hour": 15,
+  "market_end_minute": 20,
+  "trading_start_minute": 5,
+  "trading_end_minute": 15
+}
