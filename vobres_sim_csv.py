@@ -44,7 +44,7 @@ def cal_roi(days, rows, writer):
         l_p = int(rows[j-1]['low_pric'])    # 당일 최저가
         h_p = int(rows[j-1]['high_pric'])   # 당일 최고가    
         c_p = int(rows[j-1]['cur_prc'])     # 당일 현재가(종가)
-        print(f'일자 {int(rows[j-1]['dt'])} 시가 {o_p:,} 최고 {h_p:,} 저가 {l_p:,} 종가 {c_p:,} 매수 {target_price:,}', end=' ')
+        print(f"일자 {int(rows[j-1]['dt'])} 시가 {o_p:,} 최고 {h_p:,} 저가 {l_p:,} 종가 {c_p:,} 매수 {target_price:,}", end=' ')
 
         ma5 = moving_average(j-1, 5, rows)
         ma10 = moving_average(j-1, 10, rows)

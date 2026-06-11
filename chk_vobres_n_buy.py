@@ -45,23 +45,23 @@ def chk_vobres_n_buy(data, token=None, last_ohlc=None):
                             if chk_n_buy(stk_cd, token, log):
                                 time.sleep(1.0)
                                 
-                                print(f'매수 chk_n_buy: {stk_cd, data[i]['302']}, t_prc:{t_prc}, cur_prc:{cur_prc}')                            
+                                print(f"매수 chk_n_buy: {stk_cd, data[i]['302']}, t_prc:{t_prc}, cur_prc:{cur_prc}")
                                                                 
                                 buy_list.append(stk_cd) # buy_list에 매수한 종목 추가
-                                log.info(f'매수완료 {stk_cd} {data[i]['302']} {t_prc}')
+                                log.info(f"매수완료 {stk_cd} {data[i]['302']} {t_prc}")
                                 log.info('매수 리스트:', buy_list)
 
                             else:   # 잔고부족 등 에러발생 시
                                 block_list.append(stk_cd)
-                                log.error(f'매수 Error 발생: {stk_cd, data[i]['302']}, cur_prc:{cur_prc}')
-                                log.error(f'매수실패 리스트: {block_list}')
+                                log.error(f"매수 Error 발생: {stk_cd, data[i]['302']}, cur_prc:{cur_prc}")
+                                log.error(f"매수실패 리스트: {block_list}")
                 else:   # 현재가 < 5MA, 10MA
-                    log.info(f'하향추세 {stk_cd} {data[i]['302']} < 5MA 10MA')
+                    log.info(f"하향추세 {stk_cd} {data[i]['302']} < 5MA 10MA")
     
         if not found:   # last_ohlc.txt에 없는 종목이면 
-            log.warning(f' Not found in last_ohlc.txt {stk_cd} {data[i]['302']}')
+            log.warning(f"Not found in last_ohlc.txt {stk_cd} {data[i]['302']}")
         # get_daypole_data() -> last_ohlc.append -> target_price 조건에 맞으면 매수        
 
 
-    log.debug(f'조건검색 종목 수{len(data)}')
+    log.debug(f"조건검색 종목 수{len(data)}")
     

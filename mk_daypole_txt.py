@@ -43,10 +43,12 @@ def read_excelfile(excel_filename, sh_name):
 
 def mk_daypole_txt(filename, option, base_dt=None, token=None):
     script_dir = os.path.dirname(__file__)  # 현재 스크립트 파일이 있는 폴더
-    excel_fname = script_dir + '\\' + filename # "주식종목및코드 260510.xlsx"
+    # excel_fname = script_dir + '\\' + filename # "주식종목및코드 260510.xlsx"
+    excel_fname = script_dir + '/' + filename # 리눅스
     
     folder_name = 'daypole_data'    # 존재 여부 확인 후 생성(권장)
-    data_folder = script_dir + '\\' + folder_name + '\\' 
+    # data_folder = script_dir + '\\' + folder_name + '\\' 
+    data_folder = script_dir + '/' + folder_name + '/' 
 
     # 폴더가 존재하면 폴더 및 하위 파일 전체 삭제
     if os.path.exists(data_folder):
